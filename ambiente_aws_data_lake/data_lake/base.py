@@ -3,7 +3,7 @@ from aws_cdk import core
 from aws_cdk import (
     aws_s3 as s3
 )
-from ambiente_aws_data_lake.environment import Environment
+from ambiente_data_lake.ambiente_aws_data_lake.environment import Environment
 
 class DataLakeLayer(Enum):
     RAW = 'raw'
