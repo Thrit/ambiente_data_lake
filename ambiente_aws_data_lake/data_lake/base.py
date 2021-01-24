@@ -65,5 +65,5 @@ class BaseDataLakeBucket(s3.Bucket):
         )
 
         self.add_lifecycle_rule(
-            noncurrent_version_expirtation=core.Duration.days(360)
+            noncurrent_version_expiration=core.Duration.days(360)
         )
