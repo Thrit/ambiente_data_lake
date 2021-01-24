@@ -5,3 +5,4 @@ from ambiente_data_lake.ambiente_aws_data_lake.data_lake.stack import DataLakeSt
 app = core.App()
 data_lake = DataLakeStack(app)
 app.synth()
+
