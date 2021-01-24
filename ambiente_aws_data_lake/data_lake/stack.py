@@ -2,8 +2,8 @@ from aws_cdk import core
 from aws_cdk import (
     aws_s3 as s3
 )
-from ambiente_data_lake.ambiente_aws_data_lake import active_environment
-from ambiente_data_lake.ambiente_aws_data_lake.data_lake.base import(
+from ambiente_aws_data_lake import active_environment
+from ambiente_aws_data_lake.data_lake.base import(
     BaseDataLakeBucket,
     DataLakeLayer
 )
