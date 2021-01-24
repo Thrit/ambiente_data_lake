@@ -15,15 +15,15 @@ class BaseDataLakeBucket(s3.Bucket):
 
     def __init__(self, scope: core.Construct, deploy_env: Environment, layer: DataLakeLayer, **kwargs):
         self.layer = layer
-        self.delpoy_env = deploy_env
+        self.deploy_env = deploy_env
         self.obj_name = f's3-aprendendo-{self.deploy_env.value}-data-lake-{self.layer.value}'
 
         super().__init__(
             scope,
             id=self.obj_name,
             bucket_name=self.obj_name,
-            block_public_access=self.default_block_public_access,
-            encryption=self.default_encryption,
+            block_public_access=self.default_block_public_access(),
+            encryption=self.default_encryption(),
             versioned=True,
             **kwargs
         )
