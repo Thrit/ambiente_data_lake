@@ -30,12 +30,12 @@ class BaseDataLakeBucket(s3.Bucket):
 
         self.set_default_lifecycle_rules()
 
-    @property
-    def default_encryption(self):
-        return s3.BucketEncryption.S3_MANAGED
+    @staticmethod
+    def default_encryption():
+        return s3.BucketEncryption(s3.BucketEncryption.S3_MANAGED)
 
-    @property
-    def default_block_public_access(self):
+    @staticmethod
+    def default_block_public_access():
         return s3.BlockPublicAccess(
             ignore_public_acls=True,
             block_public_acls=True,
