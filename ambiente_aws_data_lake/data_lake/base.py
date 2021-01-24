@@ -10,7 +10,7 @@ class DataLakeLayer(Enum):
     PROCESSED = 'processed'
     CURATED = 'curated'
 
-class BaseDataLakeBucket(s3.bucket):
+class BaseDataLakeBucket(s3.Bucket):
     '''Criando a base dos buckets'''
 
     def __init__(self, scope: core.Construct, deploy_env: Environment, layer: DataLakeLayer, **kwargs):
